@@ -60,30 +60,32 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    background-color: rgb(0, 4, 17);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
-h1 {
+h1 a {
     font-size: 7.5rem;
 }
 
 h2 {
-    font-size: 6rem;
-}
-
-h3 {
     font-size: 5rem;
 }
 
-h4 {
+h3 {
     font-size: 4rem;
 }
 
-p, a {
+h4 {
     font-size: 3rem;
+}
+
+p, a {
+    font-size: 2rem;
 }
 
 /* header section */
@@ -122,6 +124,10 @@ header .social {
     justify-content: space-around;
 }
 
+header .social a {
+    font-size: 3rem;
+}
+
 /* spacer */
 .spacer {
     width: 100%;
@@ -135,44 +141,253 @@ header .social {
 }
 
 /* menu */
-
 .menu {
     width: 100%;
     height: auto;
-    background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
+    background:
+        linear-gradient(
+            rgba(0, 4, 17, .8),
+            rgba(0, 4, 17, .8)
+        ),
+        url('../img/staff-bartender.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.menu h2 {
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-section {
+    width: 500px;
+    padding-top: 6%;
+}
+
+.menu h3 {
+    margin-bottom: 5%;
+}
+
+.menu-item {
+    padding-bottom: 5%;
+}
+
+.menu .menu-item div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .menu-item span {
+    font-style: italic;
+}
+
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
-    padding-top: 2.5vh;
+    padding: 0 0 .5% 0;
     font-size: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+footer .mailing {
+    width: 30%;
+    padding: 1%;
+}
+
+footer h3 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1;
+}
+
+footer input {
+    height: 30%;
+    width: 70%;
+    padding: 2%;
+}
+
+footer button {
+    height: 30%;
+    width: 28%;
+    padding: 2%;
+}
+
+footer .navigation {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 3% 0;
+}
+
+footer nav a {
+    font-size: 2rem;
+}
+
+footer .copyright {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p {
+    font-size: 1.4rem;
 }
 
 /* mobile media query */
-@media (max-width: 428px) {
+@media (max-width: 501px) {
     /* header section */
-    .header-title {
-        width: 75%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 4rem;
+    h1 a {
+        font-size: 5rem;
+    }
+
+    header .site {
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0;
+    }
+
+    header .site a {
+        font-size: 2.5rem;
+    }
+
+    header .social {
+        width: 20%;
     }
 
     /* menu */
     .menu {
-        background-image: none;
+        background: rgb(225, 239, 230);
     }
+
+    .menu h2, .menu h3, .menu h4, .menu p {
+        color: black;
+    }
+
+    .menu h2 {
+        padding: 15% 0 5% 0;
+    }
+
+    .menu .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .divider {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 4% 0;
+    }
+
+    .divider .bold-line {
+        display: flex;
+        height: 18px;
+        width: 80%;
+        background: black;
+        justify-content: center;
+    }
+
+    .divider .thin-line {
+        height: 3px;
+        width: 60%;
+        background: black;
+        background-position: center;
+    }
+
+    .menu .h3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu .menu-section h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid black;
+        padding: 1% 3%;
+    }
+
+    .menu .menu-item div {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    .menu .menu-item h4 {
+        text-align: center;
+    }
+
+    .menu .menu-item p {
+        text-align: center;
+        width: 50%;
+        }
+
 
     /* footer section */
     footer {
         height: auto;
-        padding-top: 2.5vh;
+        padding-top: 3%;
         font-size: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .mailing {
+        width: 95%;
+    }
+
+    footer h3 {
+        font-size: 2.5rem;
+    }
+
+    footer input {
+        width: 100%;
+        margin-top: 5%;
+        padding: 1% 0;
+    }
+
+    footer button {
+        width: 100%;
+        padding: 1% 0;
+    }
+
+    footer nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .navigation {
+        width: 100%;
+        align-items: center;
+        }
+
+    footer .copyright {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 1% 0;
+        width: 100%;
+    }
+
+    footer p {
+        display: flex;
+        align-items: center;
     }
 }
