@@ -246,24 +246,24 @@ footer {
 footer .mailing {
     width: 30%;
     padding: 1%;
-    border: 1px solid red;
 }
 
 footer h3 {
     font-size: 3rem;
     text-align: center;
-    line-height: .5;
+    line-height: 1;
 }
 
 footer input {
     height: 30%;
     width: 70%;
-
+    padding: 2%;
 }
 
 footer button {
     height: 30%;
     width: 28%;
+    padding: 2%;
 }
 
 footer .navigation {
@@ -297,13 +297,35 @@ footer p {
 }
 
 /* mobile media query */
-@media (max-width: 428px) {
+@media (max-width: 501px) {
     /* header section */
-    
+    h1 a {
+        font-size: 5rem;
+    }
+
+    header .site {
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0;
+    }
+
+    header .site a {
+        font-size: 2.5rem;
+    }
+
+    header .social {
+        width: 30%;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
+        margin: 4% 0;
+    }
+
+    .gallery img {
+        width: 100%;
+        margin: 3% 0;
     }
     
     /* about us section */
@@ -347,7 +369,50 @@ footer p {
     /* footer section */
     footer {
         height: auto;
-        padding-top: 2.5vh;
+        padding-top: 3%;
         font-size: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .mailing {
+        width: 95%;
+    }
+
+    footer h3 {
+        font-size: 2.5rem;
+    }
+
+    footer input {
+        width: 100%;
+        margin-top: 5%;
+        padding: 1% 0;
+    }
+
+    footer button {
+        width: 100%;
+        padding: 1% 0;
+    }
+
+    footer nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .navigation {
+        width: 100%;
+        align-items: center;
+        }
+
+    footer .copyright {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 1% 0;
+        width: 100%;
+    }
+
+    footer p {
+        display: flex;
+        align-items: center;
     }
 }
