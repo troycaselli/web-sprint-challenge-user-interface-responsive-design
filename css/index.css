@@ -61,13 +61,15 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    background-color: rgb(0, 4, 17);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
-h1 {
+h1 a {
     font-size: 7.5rem;
 }
 
@@ -93,6 +95,32 @@ header {
     background-repeat: no-repeat;
 }
 
+h1 {
+    text-align: center;
+}
+
+header .header {
+    background-color: rgb(0, 4, 17, .8);
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .site {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+header .social {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
 /* spacers */
 .spacer {
     width: 100%;
@@ -108,15 +136,30 @@ header {
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+}
+
+.gallery h2 {
+    margin: 1% 0 0 0;
+}
+
+.gallery .samplers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 350px;
+    margin: 1% 1%;
 }
 
 /* about us section */
 .about {
     width: 100%;
-    height: 75vh;
+    /* height: 75vh; */
     text-align: center;
     background-image: url("../img/staff-cooks.jpg");
     background-size: cover;
@@ -135,10 +178,12 @@ header {
 
 .about h2 {
     width: 100%;
+    padding: 4% 0 6% 0;
 }
 
 .about-container .text {
-    width: 50%;
+    width: 60%;
+    padding: 0 0 4% 0;
 }
 
 /* contact us section */
@@ -191,9 +236,64 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
-    padding-top: 2.5vh;
+    padding: 0 0 .5% 0;
     font-size: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+footer .mailing {
+    width: 30%;
+    padding: 1%;
+    border: 1px solid red;
+}
+
+footer h3 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: .5;
+}
+
+footer input {
+    height: 30%;
+    width: 70%;
+
+}
+
+footer button {
+    height: 30%;
+    width: 28%;
+}
+
+footer .navigation {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 3% 0;
+}
+
+footer nav a {
+    font-size: 2rem;
+}
+
+footer .copyright {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p {
+    font-size: 1.4rem;
 }
 
 /* mobile media query */
