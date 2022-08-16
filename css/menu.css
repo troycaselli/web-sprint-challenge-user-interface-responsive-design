@@ -80,11 +80,11 @@ h3 {
     font-size: 4rem;
 }
 
-h4 {
+h4, a {
     font-size: 3rem;
 }
 
-p, a {
+p {
     font-size: 2rem;
 }
 
@@ -251,7 +251,7 @@ footer p {
 }
 
 /* mobile media query */
-@media (max-width: 501px) {
+@media (max-width: 428px) {
     /* header section */
     h1 a {
         font-size: 5rem;
@@ -265,10 +265,6 @@ footer p {
 
     header .site a {
         font-size: 2.5rem;
-    }
-
-    header .social {
-        width: 20%;
     }
 
     /* menu */

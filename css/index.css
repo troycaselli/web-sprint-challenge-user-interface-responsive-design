@@ -117,7 +117,6 @@ header .site {
 
 header .social {
     display: flex;
-    width: 20%;
     justify-content: space-around;
 }
 
@@ -297,7 +296,7 @@ footer p {
 }
 
 /* mobile media query */
-@media (max-width: 501px) {
+@media (max-width: 428px) {
     /* header section */
     h1 a {
         font-size: 5rem;
